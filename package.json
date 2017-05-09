@@ -1,0 +1,27 @@
+{
+  "name": "webpack_using",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --config webpack.config.js --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitsuharakiko/webpack_using.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitsuharakiko/webpack_using/issues"
+  },
+  "homepage": "https://github.com/mitsuharakiko/webpack_using#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.5.1"
+  }
+}
