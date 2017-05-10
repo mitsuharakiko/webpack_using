@@ -1,4 +1,5 @@
-// import tpl from './layer.html';
+import './layer.scss';
+import tpl from './layer.tpl';
 
 const layer = function () {
 	return {
