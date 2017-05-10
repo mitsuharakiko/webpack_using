@@ -2,6 +2,7 @@ var path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+	context: __dirname,
 	entry:{
 		app: './src/app.js'
 	},
@@ -13,9 +14,22 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				exclude: /node_modules/,
-				include: /src/,
+				exclude: path.resolve(__dirname, 'node_modules'),
+				include: path.resolve(__dirname, 'src'),
 				loader: 'babel-loader'
+			},
+			// {
+			// 	test: /\.css$/,
+			// 	loader: 'postcss-loader',
+			// 	options: {
+			// 	    config: {
+			// 	      	path: 'postcss.config.js'
+			// 	    }
+			//   	}
+			// },
+			{
+				test: /\.css$/,
+				loader: 'style-loader!css-loader'
 			}
 		]
 	},
@@ -23,7 +37,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'index-bundle.html',
 			template: './index.html',
-			inject: 'body'
+			inject: 'body',
+			title: ''
 		})
 	]
 }
